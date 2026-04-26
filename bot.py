@@ -344,7 +344,7 @@ async def send_morning_lesson(bot, chat_id: int):
 
     await bot.send_message(
         chat_id,
-        "📝 Hoje à noite vais receber um exercício com estes e todos os verbos anteriores. Boa sorte! 💪"
+        "📝 Hoje às 15h vais receber um exercício com estes e todos os verbos anteriores. Boa sorte! 💪"
     )
 
 async def send_evening_exercise(bot, chat_id: int):
