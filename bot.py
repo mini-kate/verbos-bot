@@ -182,7 +182,18 @@ def generate_exercise(verbs: list[str], exercise_type: str, all_verb_data: list[
                 verb_info.append(vd)
                 break
 
-    # Detect family pairs for contrast exercises
+    day = get_current_day()
+    if day <= 1:
+        n_sentences = 5
+    elif day <= 2:
+        n_sentences = 6
+    elif day <= 3:
+        n_sentences = 8
+    elif day <= 4:
+        n_sentences = 10
+    else:
+        n_sentences = 12
+
     families = {}
     for vd in verb_info:
         fam = vd.get("family", vd["verb"])
@@ -191,32 +202,25 @@ def generate_exercise(verbs: list[str], exercise_type: str, all_verb_data: list[
     contrast_note = ""
     if contrast_pairs:
         pairs_str = ", ".join([f"{p[0]}/{p[1]}" for p in contrast_pairs])
-        contrast_note = f"\nTenta incluir pelo menos um exercício de contraste entre: {pairs_str}."
+        contrast_note = f"\nInclui pelo menos uma frase de contraste entre: {pairs_str} (duas lacunas na mesma frase)."
 
     verb_summary = json.dumps(verb_info, ensure_ascii=False, indent=2)
 
-    if exercise_type == "fill_in":
-        instruction = (
-            "Cria um exercício de preenchimento de lacunas em português europeu. "
-            "Para cada verbo, escreve 1-2 frases com uma lacuna (_____) onde o utilizador deve escrever a forma correta. "
-            "Indica entre parênteses o tempo verbal e o sujeito. "
-            "Usa contextos variados: casa, trabalho, rotina, viagem, amigos, supermercado, saúde, tempo livre."
-            + contrast_note
-        )
-    else:
-        instruction = (
-            "Cria um exercício de conjugação em português europeu. "
-            "Para cada verbo, pede ao utilizador que escreva todas as formas (eu/tu/ele/nós/eles) de um tempo verbal específico. "
-            "Varia os tempos verbais entre os diferentes verbos."
-            + contrast_note
-        )
+    prompt = f"""Es um professor de portugues europeu. Cria um exercicio de preenchimento de lacunas.
 
-    prompt = f"""Tens estes verbos com as suas conjugações:
+Verbos disponiveis com conjugacoes:
 {verb_summary}
 
-{instruction}
+REGRAS OBRIGATORIAS:
+- Escreve exactamente {n_sentences} frases numeradas (1. 2. 3. ...)
+- Em cada frase, a lacuna deve ser marcada assim: [ ... ]
+- A seguir a frase, entre parenteses indica: (verbo, tempo verbal, pessoa)
+- Exemplo correto: "A minha mae [ ... ] medica num hospital. (ser, presente, ela)"
+- NAO uses Markdown, hashtags, asteriscos nem formatacao especial
+- Usa contextos do dia a dia: casa, trabalho, viagem, amigos, supermercado, saude
+- Distribui os verbos: 40% verbos de hoje, 30% verbos recentes, 30% verbos anteriores{contrast_note}
 
-Responde APENAS com o exercício, sem soluções. Em português europeu. Usa numeração clara (1., 2., 3...). Não uses mais de 2 frases por verbo."""
+Escreve APENAS as frases numeradas, sem titulos, sem introducao, sem solucao."""
 
     message = claude_client.messages.create(
         model="claude-haiku-4-5-20251001",
@@ -235,21 +239,20 @@ def check_answers(user_answer: str, verbs: list[str], exercise_type: str, all_ve
 
     verb_summary = json.dumps(verb_info, ensure_ascii=False, indent=2)
 
-    prompt = f"""És um professor de português europeu. O aluno respondeu a um exercício.
+    prompt = f"""Es um professor de portugues europeu. O aluno respondeu a um exercicio de preenchimento de lacunas.
 
-Conjugações corretas dos verbos:
+Conjugacoes corretas dos verbos:
 {verb_summary}
 
-Resposta do aluno:
+Resposta do aluno (ele escreveu as respostas em ordem, uma por linha ou separadas por virgula):
 {user_answer}
 
-Tipo de exercício: {"preenchimento de lacunas" if exercise_type == "fill_in" else "conjugação completa"}
-
 Por favor:
-1. Indica quais respostas estão corretas ✅ e quais estão erradas ❌
-2. Para as erradas, mostra a forma correta
-3. Dá uma nota de encorajamento no final
-4. Responde em russo (но примеры оставь на португальском)"""
+1. Para cada resposta, indica o numero da frase, a forma que o aluno escreveu, e se esta correta ou errada
+   Formato: "1. [resposta do aluno] — correto / errado (forma correta: ...)"
+2. No final, escreve quantas respostas estao corretas de quantas no total
+3. Uma frase curta de encorajamento
+4. Responde em russo, mas as formas verbais deixa em portugues"""
 
     message = claude_client.messages.create(
         model="claude-haiku-4-5-20251001",
@@ -359,14 +362,15 @@ async def send_evening_exercise(bot, chat_id: int):
 
     all_verb_data = load_verbs()
 
-    await bot.send_message(chat_id, "⏰ *Hora de praticar!* A preparar o exercício...", parse_mode="Markdown")
+    await bot.send_message(chat_id, "🌙 *Hora de praticar!* A preparar o exercício...", parse_mode="Markdown")
     exercise_text = generate_exercise(all_learned, exercise_type, all_verb_data)
 
-    type_label = "preenchimento de lacunas" if exercise_type == "fill_in" else "conjugação completa"
     await bot.send_message(
         chat_id,
-        f"📝 *Exercício do dia {current_day}* ({type_label}):\n\n{exercise_text}\n\n"
-        f"_Escreve as tuas respostas numa mensagem e eu vou verificar!"
+        f"📝 Exercício do dia {current_day}\n\n"
+        f"Completa as frases com a forma correta do verbo indicado.\n\n"
+        f"{exercise_text}\n\n"
+        f"Escreve as tuas respostas numa mensagem e eu vou verificar! 💪"
     )
 
     user_state[YOUR_TELEGRAM_ID] = {
