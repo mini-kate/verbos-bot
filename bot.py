@@ -206,7 +206,7 @@ def generate_exercise(verbs: list[str], exercise_type: str, all_verb_data: list[
 
     verb_summary = json.dumps(verb_info, ensure_ascii=False, indent=2)
 
-    prompt = f"""Es um professor de portugues europeu. Cria um exercicio de preenchimento de lacunas.
+    prompt = f"""Es um professor de portugues europeu. Cria um exercicio de preenchimento de lacunas para nivel A2.
 
 Verbos disponiveis com conjugacoes:
 {verb_summary}
@@ -214,11 +214,15 @@ Verbos disponiveis com conjugacoes:
 REGRAS OBRIGATORIAS:
 - Escreve exactamente {n_sentences} frases numeradas (1. 2. 3. ...)
 - Em cada frase, a lacuna deve ser marcada assim: [ ... ]
-- A seguir a frase, entre parenteses indica: (verbo, tempo verbal, pessoa)
-- Exemplo correto: "A minha mae [ ... ] medica num hospital. (ser, presente, ela)"
-- NAO uses Markdown, hashtags, asteriscos nem formatacao especial
-- Usa contextos do dia a dia: casa, trabalho, viagem, amigos, supermercado, saude
-- Distribui os verbos: 40% verbos de hoje, 30% verbos recentes, 30% verbos anteriores{contrast_note}
+- Cada frase tem APENAS UMA lacuna — nunca duas lacunas na mesma frase
+- A seguir a frase, entre parenteses indica apenas: (verbo, tempo verbal) — SEM pronome
+- Exemplo correto: "A minha mae [ ... ] medica num hospital. (ser, presente)"
+- Exemplo ERRADO: "A minha mae [ ... ] medica. (ser, presente, ela)" — nao incluas o pronome
+- NAO uses Markdown, hashtags (#), asteriscos (*) nem formatacao especial
+- Usa contextos simples do dia a dia: casa, trabalho, viagem, amigos, supermercado, saude
+- Distribui os verbos: 40% verbos de hoje, 30% verbos recentes, 30% verbos anteriores
+- Se uma frase tem duas lacunas com tempos DIFERENTES, indica os dois tempos separados por "/": (estar, pretérito perfeito / estar, pretérito imperfeito)
+- A dica entre parenteses deve ser SEMPRE correta e corresponder exactamente a forma esperada{contrast_note}
 
 Escreve APENAS as frases numeradas, sem titulos, sem introducao, sem solucao."""
 
@@ -239,20 +243,24 @@ def check_answers(user_answer: str, verbs: list[str], exercise_type: str, all_ve
 
     verb_summary = json.dumps(verb_info, ensure_ascii=False, indent=2)
 
-    prompt = f"""Es um professor de portugues europeu. O aluno respondeu a um exercicio de preenchimento de lacunas.
+    prompt = f"""Es um professor de portugues europeu para nivel A2. O aluno respondeu a um exercicio.
 
 Conjugacoes corretas dos verbos:
 {verb_summary}
 
-Resposta do aluno (ele escreveu as respostas em ordem, uma por linha ou separadas por virgula):
+Resposta do aluno (respostas em ordem, uma por linha ou separadas por virgula):
 {user_answer}
 
-Por favor:
-1. Para cada resposta, indica o numero da frase, a forma que o aluno escreveu, e se esta correta ou errada
-   Formato: "1. [resposta do aluno] — correto / errado (forma correta: ...)"
-2. No final, escreve quantas respostas estao corretas de quantas no total
-3. Uma frase curta de encorajamento
-4. Responde em russo, mas as formas verbais deixa em portugues"""
+REGRAS para a correcao:
+1. Para cada resposta escreve numa linha:
+   "1. [resposta do aluno] — correto ✅" ou "1. [resposta do aluno] — errado ❌ (correto: forma)"
+2. Para cada resposta ERRADA, na linha seguinte explica brevemente PORQUE a forma correta e diferente.
+   Usa portugues simples A2, maximo 2 frases curtas. Explica a regra gramatical de forma clara.
+   Exemplo: "O pretérito imperfeito descreve um estado ou sentimento no passado. Por isso usamos 'estava' e nao 'estive'."
+3. Depois de todas as respostas, uma linha vazia, depois:
+   "Resultado: X de Y corretas 🎯"
+4. Uma frase curta de encorajamento em portugues simples A2
+5. NAO uses Markdown, hashtags (#), asteriscos (*), nem "---"."""
 
     message = claude_client.messages.create(
         model="claude-haiku-4-5-20251001",
