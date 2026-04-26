@@ -359,15 +359,14 @@ async def send_evening_exercise(bot, chat_id: int):
 
     all_verb_data = load_verbs()
 
-    await bot.send_message(chat_id, "🌙 *Hora de praticar!* A preparar o exercício...", parse_mode="Markdown")
+    await bot.send_message(chat_id, "⏰ *Hora de praticar!* A preparar o exercício...", parse_mode="Markdown")
     exercise_text = generate_exercise(all_learned, exercise_type, all_verb_data)
 
     type_label = "preenchimento de lacunas" if exercise_type == "fill_in" else "conjugação completa"
     await bot.send_message(
         chat_id,
         f"📝 *Exercício do dia {current_day}* ({type_label}):\n\n{exercise_text}\n\n"
-        f"_Escreve as tuas respostas numa mensagem e eu vou verificar!_",
-        parse_mode="Markdown"
+        f"_Escreve as tuas respostas numa mensagem e eu vou verificar!"
     )
 
     user_state[YOUR_TELEGRAM_ID] = {
