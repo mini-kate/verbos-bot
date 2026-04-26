@@ -1,0 +1,731 @@
+[
+  {
+    "order": 1,
+    "verb": "ser",
+    "translation_ru": "быть (постоянное качество)",
+    "comment_ru": "Используется для постоянных характеристик: национальность, профессия, характер, материал. Не путай с estar!",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "ser_estar",
+    "family_note": "Учи вместе с estar — это самая важная пара в португальском",
+    "atenção": "ser и ir имеют одинаковые формы в pretérito perfeito (fui, foste, foi...) — определяй по контексту",
+    "tenses": {
+      "presente":             ["sou", "és", "é", "somos", "sois", "são"],
+      "preterito_perfeito":   ["fui", "foste", "foi", "fomos", "fostes", "foram"],
+      "preterito_imperfeito": ["era", "eras", "era", "éramos", "éreis", "eram"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Eu sou russa, mas vivo em Portugal.", "ru": "Я русская, но живу в Португалии."},
+      {"tense": "preterito_perfeito",  "pt": "Ontem foi um dia difícil.", "ru": "Вчера был тяжёлый день."},
+      {"tense": "preterito_imperfeito","pt": "Quando era criança, era muito tímida.", "ru": "Когда я была ребёнком, я была очень стеснительной."}
+    ]
+  },
+  {
+    "order": 2,
+    "verb": "estar",
+    "translation_ru": "быть (временное состояние)",
+    "comment_ru": "Используется для временных состояний, местонахождения, настроения, погоды. Не путай с ser!",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "ser_estar",
+    "family_note": "Учи вместе с ser — это самая важная пара в португальском",
+    "atenção": "Местонахождение — всегда estar (даже постоянное: Lisboa está em Portugal). Профессия — ser.",
+    "tenses": {
+      "presente":             ["estou", "estás", "está", "estamos", "estais", "estão"],
+      "preterito_perfeito":   ["estive", "estiveste", "esteve", "estivemos", "estivestes", "estiveram"],
+      "preterito_imperfeito": ["estava", "estavas", "estava", "estávamos", "estáveis", "estavam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Estou cansada hoje.", "ru": "Сегодня я устала."},
+      {"tense": "preterito_perfeito",  "pt": "Estive em Lisboa no fim de semana.", "ru": "На выходных я была в Лиссабоне."},
+      {"tense": "preterito_imperfeito","pt": "Estava a chover quando saí.", "ru": "Когда я вышла, шёл дождь."}
+    ]
+  },
+  {
+    "order": 3,
+    "verb": "ter",
+    "translation_ru": "иметь; (вспомогательный глагол)",
+    "comment_ru": "Основное значение — иметь. Также используется как вспомогательный для ter + particípio.",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "ter_haver",
+    "family_note": "Учи вместе с haver — оба значат 'иметь/быть', но haver более формальный",
+    "atenção": "Не путай tem (ele tem) и têm (eles têm) — разные ударения и значения",
+    "tenses": {
+      "presente":             ["tenho", "tens", "tem", "temos", "tendes", "têm"],
+      "preterito_perfeito":   ["tive", "tiveste", "teve", "tivemos", "tivestes", "tiveram"],
+      "preterito_imperfeito": ["tinha", "tinhas", "tinha", "tínhamos", "tínheis", "tinham"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Tenho aula de português às terças.", "ru": "У меня урок португальского по вторникам."},
+      {"tense": "preterito_perfeito",  "pt": "Tive uma reunião longa esta manhã.", "ru": "Сегодня утром у меня было долгое совещание."},
+      {"tense": "preterito_imperfeito","pt": "Tinha muito tempo livre nessa altura.", "ru": "В то время у меня было много свободного времени."}
+    ]
+  },
+  {
+    "order": 4,
+    "verb": "ir",
+    "translation_ru": "идти, ехать (движение от говорящего)",
+    "comment_ru": "Движение туда, от себя. Также используется для будущего: vou fazer = я буду делать.",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "ir_vir",
+    "family_note": "Учи вместе с vir — ir (туда) vs vir (сюда)",
+    "atenção": "В pretérito perfeito формы совпадают с ser (fui, foste...) — только контекст помогает",
+    "tenses": {
+      "presente":             ["vou", "vais", "vai", "vamos", "ides", "vão"],
+      "preterito_perfeito":   ["fui", "foste", "foi", "fomos", "fostes", "foram"],
+      "preterito_imperfeito": ["ia", "ias", "ia", "íamos", "íeis", "iam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Vou ao supermercado depois do trabalho.", "ru": "После работы иду в супермаркет."},
+      {"tense": "preterito_perfeito",  "pt": "Fui ao médico na semana passada.", "ru": "На прошлой неделе я ходила к врачу."},
+      {"tense": "preterito_imperfeito","pt": "Íamos sempre à praia no verão.", "ru": "Летом мы всегда ходили на пляж."}
+    ]
+  },
+  {
+    "order": 5,
+    "verb": "vir",
+    "translation_ru": "приходить, приезжать (движение к говорящему)",
+    "comment_ru": "Движение сюда, к себе. Противоположность ir.",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "ir_vir",
+    "family_note": "Учи вместе с ir — ir (туда) vs vir (сюда)",
+    "atenção": "vens/vem/vêm — следи за ударением. Vens (tu) vs vem (ele) vs vêm (eles).",
+    "tenses": {
+      "presente":             ["venho", "vens", "vem", "vimos", "vindes", "vêm"],
+      "preterito_perfeito":   ["vim", "vieste", "veio", "viemos", "viestes", "vieram"],
+      "preterito_imperfeito": ["vinha", "vinhas", "vinha", "vínhamos", "vínheis", "vinham"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Vens jantar cá esta noite?", "ru": "Ты придёшь ужинать сегодня вечером?"},
+      {"tense": "preterito_perfeito",  "pt": "Ela veio de Lisboa de comboio.", "ru": "Она приехала из Лиссабона на поезде."},
+      {"tense": "preterito_imperfeito","pt": "Ele vinha sempre de bicicleta.", "ru": "Он всегда приезжал на велосипеде."}
+    ]
+  },
+  {
+    "order": 6,
+    "verb": "fazer",
+    "translation_ru": "делать",
+    "comment_ru": "Очень частый глагол. Fazer anos (отмечать день рождения), fazer falta (не хватать).",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "dizer_fazer_trazer",
+    "family_note": "Учи вместе с dizer и trazer — похожие нарушения в корне",
+    "atenção": "faço (eu, presente) — не fazo! В perfeito: fiz, fizeste, fez — корень полностью меняется.",
+    "tenses": {
+      "presente":             ["faço", "fazes", "faz", "fazemos", "fazeis", "fazem"],
+      "preterito_perfeito":   ["fiz", "fizeste", "fez", "fizemos", "fizestes", "fizeram"],
+      "preterito_imperfeito": ["fazia", "fazias", "fazia", "fazíamos", "fazíeis", "faziam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Faço exercício três vezes por semana.", "ru": "Я занимаюсь спортом три раза в неделю."},
+      {"tense": "preterito_perfeito",  "pt": "Fiz um bolo para o aniversário.", "ru": "Я испекла торт на день рождения."},
+      {"tense": "preterito_imperfeito","pt": "O que fazias nos fins de semana?", "ru": "Что ты делала на выходных?"}
+    ]
+  },
+  {
+    "order": 7,
+    "verb": "dizer",
+    "translation_ru": "говорить, сказать",
+    "comment_ru": "Говорить что-то конкретное, сообщать. Не путай с falar (говорить на языке / общаться).",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "dizer_fazer_trazer",
+    "family_note": "Учи вместе с fazer и trazer — похожие нарушения",
+    "atenção": "digo (eu, presente). В perfeito: disse, disseste — двойное ss.",
+    "tenses": {
+      "presente":             ["digo", "dizes", "diz", "dizemos", "dizeis", "dizem"],
+      "preterito_perfeito":   ["disse", "disseste", "disse", "dissemos", "dissestes", "disseram"],
+      "preterito_imperfeito": ["dizia", "dizias", "dizia", "dizíamos", "dizíeis", "diziam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Digo sempre o que penso.", "ru": "Я всегда говорю то, что думаю."},
+      {"tense": "preterito_perfeito",  "pt": "O que é que ela disse?", "ru": "Что она сказала?"},
+      {"tense": "preterito_imperfeito","pt": "Ele dizia sempre que ia mudar.", "ru": "Он всегда говорил, что изменится."}
+    ]
+  },
+  {
+    "order": 8,
+    "verb": "trazer",
+    "translation_ru": "приносить",
+    "comment_ru": "Принести сюда. Противоположность levar (унести туда).",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "dizer_fazer_trazer",
+    "family_note": "Учи вместе с fazer и dizer",
+    "atenção": "trago (eu, presente). В perfeito: trouxe — совсем другой корень, часто путают!",
+    "tenses": {
+      "presente":             ["trago", "trazes", "traz", "trazemos", "trazeis", "trazem"],
+      "preterito_perfeito":   ["trouxe", "trouxeste", "trouxe", "trouxemos", "trouxestes", "trouxeram"],
+      "preterito_imperfeito": ["trazia", "trazias", "trazia", "trazíamos", "trazíeis", "traziam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Trago sempre o almoço de casa.", "ru": "Я всегда приношу обед из дома."},
+      {"tense": "preterito_perfeito",  "pt": "Trouxe uma garrafa de vinho.", "ru": "Я принесла бутылку вина."},
+      {"tense": "preterito_imperfeito","pt": "Ela trazia flores todas as semanas.", "ru": "Она каждую неделю приносила цветы."}
+    ]
+  },
+  {
+    "order": 9,
+    "verb": "dar",
+    "translation_ru": "давать",
+    "comment_ru": "Очень частый глагол. Dar uma volta (прогуляться), dar conta (замечать), não dá (не получается).",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "dar",
+    "atenção": "dou (eu, presente). В perfeito: dei, deste, deu — не путай с ser/ir.",
+    "tenses": {
+      "presente":             ["dou", "dás", "dá", "damos", "dais", "dão"],
+      "preterito_perfeito":   ["dei", "deste", "deu", "demos", "destes", "deram"],
+      "preterito_imperfeito": ["dava", "davas", "dava", "dávamos", "dáveis", "davam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Dou uma volta antes de dormir.", "ru": "Я гуляю перед сном."},
+      {"tense": "preterito_perfeito",  "pt": "Dei-lhe o meu número de telefone.", "ru": "Я дала ему свой номер телефона."},
+      {"tense": "preterito_imperfeito","pt": "Dava passeios longos todos os dias.", "ru": "Каждый день я делала долгие прогулки."}
+    ]
+  },
+  {
+    "order": 10,
+    "verb": "ver",
+    "translation_ru": "видеть, смотреть",
+    "comment_ru": "Видеть / смотреть. Учи вместе с ler — похожие нарушения в presente.",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "ver_ler",
+    "family_note": "Учи вместе с ler — похожая логика нарушений",
+    "atenção": "vejo (eu), vês (tu), vê (ele), veem (eles) — не путай vê и veem.",
+    "tenses": {
+      "presente":             ["vejo", "vês", "vê", "vemos", "vedes", "veem"],
+      "preterito_perfeito":   ["vi", "viste", "viu", "vimos", "vistes", "viram"],
+      "preterito_imperfeito": ["via", "vias", "via", "víamos", "víeis", "viam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Vejo as notícias de manhã.", "ru": "Утром я смотрю новости."},
+      {"tense": "preterito_perfeito",  "pt": "Vi um filme incrível ontem.", "ru": "Вчера я посмотрела потрясающий фильм."},
+      {"tense": "preterito_imperfeito","pt": "Quando era nova, via muita televisão.", "ru": "В молодости я много смотрела телевизор."}
+    ]
+  },
+  {
+    "order": 11,
+    "verb": "ler",
+    "translation_ru": "читать",
+    "comment_ru": "Читать. Учи вместе с ver — похожие нарушения.",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "ver_ler",
+    "family_note": "Учи вместе с ver",
+    "atenção": "leio (eu), lês (tu), lê (ele), leem (eles) — параллельно с ver/vejo.",
+    "tenses": {
+      "presente":             ["leio", "lês", "lê", "lemos", "ledes", "leem"],
+      "preterito_perfeito":   ["li", "leste", "leu", "lemos", "lestes", "leram"],
+      "preterito_imperfeito": ["lia", "lias", "lia", "líamos", "líeis", "liam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Leio um pouco antes de dormir.", "ru": "Перед сном я немного читаю."},
+      {"tense": "preterito_perfeito",  "pt": "Li esse livro em três dias.", "ru": "Я прочитала эту книгу за три дня."},
+      {"tense": "preterito_imperfeito","pt": "Em criança, lia muito.", "ru": "В детстве я много читала."}
+    ]
+  },
+  {
+    "order": 12,
+    "verb": "poder",
+    "translation_ru": "мочь, иметь возможность",
+    "comment_ru": "Модальный глагол — физическая или обстоятельственная возможность.",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "modais",
+    "family_note": "Модальные глаголы: poder, querer, saber — учи группой",
+    "atenção": "posso (eu, presente) — не podo! В perfeito: pude, pôde (ele) — с acento.",
+    "tenses": {
+      "presente":             ["posso", "podes", "pode", "podemos", "podeis", "podem"],
+      "preterito_perfeito":   ["pude", "pudeste", "pôde", "pudemos", "pudestes", "puderam"],
+      "preterito_imperfeito": ["podia", "podias", "podia", "podíamos", "podíeis", "podiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Posso ajudar-te com isso.", "ru": "Я могу тебе с этим помочь."},
+      {"tense": "preterito_perfeito",  "pt": "Não pude ir à reunião.", "ru": "Я не смогла пойти на встречу."},
+      {"tense": "preterito_imperfeito","pt": "Antes podia correr muito mais.", "ru": "Раньше я могла бегать намного больше."}
+    ]
+  },
+  {
+    "order": 13,
+    "verb": "querer",
+    "translation_ru": "хотеть",
+    "comment_ru": "Хотеть что-то / кого-то. Querer bem = любить (не романтически).",
+    "type": "irregular",
+    "priority": "super_basic",
+    "family": "modais",
+    "family_note": "Модальные глаголы: poder, querer, saber",
+    "atenção": "quero (eu). В perfeito: quis, quiseste — корень меняется полностью.",
+    "tenses": {
+      "presente":             ["quero", "queres", "quer", "queremos", "quereis", "querem"],
+      "preterito_perfeito":   ["quis", "quiseste", "quis", "quisemos", "quisestes", "quiseram"],
+      "preterito_imperfeito": ["queria", "querias", "queria", "queríamos", "queríeis", "queriam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Quero aprender a cozinhar pratos portugueses.", "ru": "Я хочу научиться готовить португальские блюда."},
+      {"tense": "preterito_perfeito",  "pt": "Quis desistir, mas continuei.", "ru": "Я хотела сдаться, но продолжила."},
+      {"tense": "preterito_imperfeito","pt": "Em criança, queria ser bailarina.", "ru": "В детстве я хотела быть балериной."}
+    ]
+  },
+  {
+    "order": 14,
+    "verb": "saber",
+    "translation_ru": "знать (факты, умения)",
+    "comment_ru": "Знать факты или уметь делать что-то. Не путай с conhecer (знать человека/место).",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "modais",
+    "family_note": "Модальные глаголы: poder, querer, saber",
+    "atenção": "sei (eu, presente) — совсем короткая форма! В perfeito: soube, soubeste.",
+    "tenses": {
+      "presente":             ["sei", "sabes", "sabe", "sabemos", "sabeis", "sabem"],
+      "preterito_perfeito":   ["soube", "soubeste", "soube", "soubemos", "soubestes", "souberam"],
+      "preterito_imperfeito": ["sabia", "sabias", "sabia", "sabíamos", "sabíeis", "sabiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Sei falar um pouco de português.", "ru": "Я немного умею говорить по-португальски."},
+      {"tense": "preterito_perfeito",  "pt": "Soube a notícia pela rádio.", "ru": "Я узнала новость по радио."},
+      {"tense": "preterito_imperfeito","pt": "Não sabia que ela morava aqui.", "ru": "Я не знала, что она здесь живёт."}
+    ]
+  },
+  {
+    "order": 15,
+    "verb": "pôr",
+    "translation_ru": "класть, ставить, надевать",
+    "comment_ru": "Pôr a mesa (накрывать на стол), pôr roupa (надевать одежду).",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "por",
+    "atenção": "ponho (eu, presente) — неожиданная форма! Imperfeito: punha. Acento важен: pôr (глагол) vs por (предлог).",
+    "tenses": {
+      "presente":             ["ponho", "pões", "põe", "pomos", "pondes", "põem"],
+      "preterito_perfeito":   ["pus", "puseste", "pôs", "pusemos", "pusestes", "puseram"],
+      "preterito_imperfeito": ["punha", "punhas", "punha", "púnhamos", "púnheis", "punham"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Ponho o telemóvel em silêncio à noite.", "ru": "Ночью я ставлю телефон на беззвучный."},
+      {"tense": "preterito_perfeito",  "pt": "Pus as chaves em cima da mesa.", "ru": "Я положила ключи на стол."},
+      {"tense": "preterito_imperfeito","pt": "Punha sempre música enquanto cozinhava.", "ru": "Я всегда включала музыку пока готовила."}
+    ]
+  },
+  {
+    "order": 16,
+    "verb": "caber",
+    "translation_ru": "помещаться, влезать",
+    "comment_ru": "Помещаться в пространстве. Cabe aqui? = Это сюда влезет?",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "caber_cair_sair",
+    "family_note": "Учи вместе с cair и sair — похожие нарушения в eu presente",
+    "atenção": "caibo (eu, presente) — неожиданное -b-! В perfeito: coube, coubeste.",
+    "tenses": {
+      "presente":             ["caibo", "cabes", "cabe", "cabemos", "cabeis", "cabem"],
+      "preterito_perfeito":   ["coube", "coubeste", "coube", "coubemos", "coubestes", "couberam"],
+      "preterito_imperfeito": ["cabia", "cabias", "cabia", "cabíamos", "cabíeis", "cabiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Não cabe mais nada na mala.", "ru": "В чемодан больше ничего не влезает."},
+      {"tense": "preterito_perfeito",  "pt": "Coube tudo no carro.", "ru": "Всё поместилось в машину."},
+      {"tense": "preterito_imperfeito","pt": "Antes cabia mais roupa neste armário.", "ru": "Раньше в этом шкафу помещалось больше одежды."}
+    ]
+  },
+  {
+    "order": 17,
+    "verb": "cair",
+    "translation_ru": "падать",
+    "comment_ru": "Падать физически или метафорически. Cair bem = идти к лицу / подходить.",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "caber_cair_sair",
+    "family_note": "Учи вместе с sair — очень похожие формы!",
+    "atenção": "caio (eu, presente). В perfeito: caí, caíste — обрати внимание на трема над i.",
+    "tenses": {
+      "presente":             ["caio", "cais", "cai", "caímos", "caís", "caem"],
+      "preterito_perfeito":   ["caí", "caíste", "caiu", "caímos", "caístes", "caíram"],
+      "preterito_imperfeito": ["caía", "caías", "caía", "caíamos", "caíeis", "caíam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Às vezes caio quando corro.", "ru": "Иногда я падаю когда бегу."},
+      {"tense": "preterito_perfeito",  "pt": "Caí na escada ontem.", "ru": "Вчера я упала на лестнице."},
+      {"tense": "preterito_imperfeito","pt": "Em criança, caía muito de bicicleta.", "ru": "В детстве я часто падала с велосипеда."}
+    ]
+  },
+  {
+    "order": 18,
+    "verb": "sair",
+    "translation_ru": "выходить, уходить",
+    "comment_ru": "Выходить откуда-то. Sair com alguém = встречаться с кем-то (свидание).",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "caber_cair_sair",
+    "family_note": "Учи вместе с cair — очень похожие формы",
+    "atenção": "saio (eu, presente). Не путай с cair — формы очень похожи: saio/caio, sais/cais!",
+    "tenses": {
+      "presente":             ["saio", "sais", "sai", "saímos", "saís", "saem"],
+      "preterito_perfeito":   ["saí", "saíste", "saiu", "saímos", "saístes", "saíram"],
+      "preterito_imperfeito": ["saía", "saías", "saía", "saíamos", "saíeis", "saíam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Saio de casa às oito da manhã.", "ru": "Я выхожу из дома в восемь утра."},
+      {"tense": "preterito_perfeito",  "pt": "Saí mais cedo do trabalho.", "ru": "Я ушла с работы раньше."},
+      {"tense": "preterito_imperfeito","pt": "Saía sempre com os amigos ao fim de semana.", "ru": "На выходных я всегда выходила с друзьями."}
+    ]
+  },
+  {
+    "order": 19,
+    "verb": "haver",
+    "translation_ru": "быть (безличное), иметься",
+    "comment_ru": "Безличный глагол: há = есть/существует. Также вспомогательный в haver de (= нужно). Очень важен в разговоре.",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "ter_haver",
+    "family_note": "Учи вместе с ter",
+    "atenção": "Чаще всего используется только há (presente) и houve (perfeito). Полную парадигму почти не используют.",
+    "tenses": {
+      "presente":             ["hei", "hás", "há", "havemos", "haveis", "hão"],
+      "preterito_perfeito":   ["houve", "houveste", "houve", "houvemos", "houvestes", "houveram"],
+      "preterito_imperfeito": ["havia", "havias", "havia", "havíamos", "havíeis", "haviam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Há um café muito bom perto de casa.", "ru": "Рядом с домом есть очень хорошее кафе."},
+      {"tense": "preterito_perfeito",  "pt": "Houve um problema com a encomenda.", "ru": "С заказом возникла проблема."},
+      {"tense": "preterito_imperfeito","pt": "Havia sempre muita gente naquele restaurante.", "ru": "В том ресторане всегда было много людей."}
+    ]
+  },
+  {
+    "order": 20,
+    "verb": "rir",
+    "translation_ru": "смеяться",
+    "comment_ru": "Смеяться. Rir-se = смеяться над чем-то/кем-то.",
+    "type": "irregular",
+    "priority": "secundario",
+    "family": "rir",
+    "atenção": "rio (eu, presente). В perfeito: ri, riste, riu — очень коротко! Imperfeito: ria.",
+    "tenses": {
+      "presente":             ["rio", "ris", "ri", "rimos", "rides", "riem"],
+      "preterito_perfeito":   ["ri", "riste", "riu", "rimos", "ristes", "riram"],
+      "preterito_imperfeito": ["ria", "rias", "ria", "ríamos", "ríeis", "riam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Rio muito quando estou com os meus amigos.", "ru": "С друзьями я много смеюсь."},
+      {"tense": "preterito_perfeito",  "pt": "Rimos muito ontem à noite.", "ru": "Вчера вечером мы много смеялись."},
+      {"tense": "preterito_imperfeito","pt": "Ela ria sempre das minhas piadas.", "ru": "Она всегда смеялась над моими шутками."}
+    ]
+  },
+  {
+    "order": 21,
+    "verb": "doer",
+    "translation_ru": "болеть (о части тела)",
+    "comment_ru": "Безличный глагол как doler в испанском. Используется только в 3-м лице.",
+    "type": "irregular",
+    "priority": "prioritario",
+    "family": "doer",
+    "atenção": "Никогда не скажешь 'eu doo' — только dói-me (мне больно), doem-me os pés (у меня болят ноги).",
+    "tenses": {
+      "presente":             ["-", "-", "dói", "-", "-", "doem"],
+      "preterito_perfeito":   ["-", "-", "doeu", "-", "-", "doeram"],
+      "preterito_imperfeito": ["-", "-", "doía", "-", "-", "doíam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Dói-me muito a cabeça.", "ru": "У меня сильно болит голова."},
+      {"tense": "preterito_perfeito",  "pt": "Doeu-me o joelho depois de correr.", "ru": "После бега у меня заболело колено."},
+      {"tense": "preterito_imperfeito","pt": "Doíam-me os pés no fim do dia.", "ru": "К концу дня у меня болели ноги."}
+    ]
+  },
+  {
+    "order": 22,
+    "verb": "falar",
+    "translation_ru": "говорить, разговаривать",
+    "comment_ru": "Регулярный глагол -ar. Говорить на языке или общаться. Не путай с dizer (сказать что-то конкретное).",
+    "type": "regular",
+    "priority": "super_basic",
+    "family": "regular_ar",
+    "family_note": "Образцовый глагол для группы -ar: falar, ficar, chegar, começar",
+    "atenção": "Полностью регулярный — выучи его как шаблон для всех глаголов -ar!",
+    "tenses": {
+      "presente":             ["falo", "falas", "fala", "falamos", "falais", "falam"],
+      "preterito_perfeito":   ["falei", "falaste", "falou", "falámos", "falastes", "falaram"],
+      "preterito_imperfeito": ["falava", "falavas", "falava", "falávamos", "faláveis", "falavam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Falo português todos os dias.", "ru": "Я говорю на португальском каждый день."},
+      {"tense": "preterito_perfeito",  "pt": "Falámos muito na aula de hoje.", "ru": "Сегодня на уроке мы много говорили."},
+      {"tense": "preterito_imperfeito","pt": "Antes falava só russo em casa.", "ru": "Раньше дома я говорила только по-русски."}
+    ]
+  },
+  {
+    "order": 23,
+    "verb": "comer",
+    "translation_ru": "есть, кушать",
+    "comment_ru": "Регулярный глагол -er. Образец для группы -er.",
+    "type": "regular",
+    "priority": "super_basic",
+    "family": "regular_er",
+    "family_note": "Образцовый глагол для группы -er",
+    "atenção": "Полностью регулярный — выучи как шаблон для всех глаголов -er!",
+    "tenses": {
+      "presente":             ["como", "comes", "come", "comemos", "comeis", "comem"],
+      "preterito_perfeito":   ["comi", "comeste", "comeu", "comemos", "comestes", "comeram"],
+      "preterito_imperfeito": ["comia", "comias", "comia", "comíamos", "comíeis", "comiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Como sempre em casa ao almoço.", "ru": "На обед я всегда ем дома."},
+      {"tense": "preterito_perfeito",  "pt": "Comi um pastel de nata delicioso.", "ru": "Я съела вкуснейший паштел де ната."},
+      {"tense": "preterito_imperfeito","pt": "Comia muito peixe quando vivia à beira-mar.", "ru": "Когда я жила у моря, я много ела рыбы."}
+    ]
+  },
+  {
+    "order": 24,
+    "verb": "partir",
+    "translation_ru": "уезжать; ломать",
+    "comment_ru": "Два значения: уезжать/отправляться И ломать. Partir o braço = сломать руку.",
+    "type": "regular",
+    "priority": "prioritario",
+    "family": "regular_ir",
+    "family_note": "Образцовый глагол для группы -ir",
+    "atenção": "Регулярный -ir, но два значения — контекст важен.",
+    "tenses": {
+      "presente":             ["parto", "partes", "parte", "partimos", "partis", "partem"],
+      "preterito_perfeito":   ["parti", "partiste", "partiu", "partimos", "partistes", "partiram"],
+      "preterito_imperfeito": ["partia", "partias", "partia", "partíamos", "partíeis", "partiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "O comboio parte às nove.", "ru": "Поезд отправляется в девять."},
+      {"tense": "preterito_perfeito",  "pt": "Parti de Lisboa de manhã.", "ru": "Утром я уехала из Лиссабона."},
+      {"tense": "preterito_imperfeito","pt": "Partia sempre em viagem no verão.", "ru": "Летом я всегда уезжала в путешествие."}
+    ]
+  },
+  {
+    "order": 25,
+    "verb": "vestir",
+    "translation_ru": "одевать(ся), надевать",
+    "comment_ru": "Надевать на себя. Vestir-se = одеться. Учи вместе с despir — они противоположности.",
+    "type": "quasi_regular",
+    "priority": "prioritario",
+    "family": "vestir_despir",
+    "family_note": "Учи вместе с despir — надевать vs снимать",
+    "atenção": "visto (eu, presente) — mudança no radical: e→i. Остальные формы регулярные.",
+    "tenses": {
+      "presente":             ["visto", "vestes", "veste", "vestimos", "vestis", "vestem"],
+      "preterito_perfeito":   ["vesti", "vestiste", "vestiu", "vestimos", "vestistes", "vestiram"],
+      "preterito_imperfeito": ["vestia", "vestias", "vestia", "vestíamos", "vestíeis", "vestiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Visto-me rápido de manhã.", "ru": "Утром я одеваюсь быстро."},
+      {"tense": "preterito_perfeito",  "pt": "Vesti o casaco porque estava frio.", "ru": "Я надела пальто, потому что было холодно."},
+      {"tense": "preterito_imperfeito","pt": "Vestia sempre roupa confortável em casa.", "ru": "Дома я всегда носила удобную одежду."}
+    ]
+  },
+  {
+    "order": 26,
+    "verb": "despir",
+    "translation_ru": "раздевать(ся), снимать (одежду)",
+    "comment_ru": "Снять одежду. Despir-se = раздеться. Противоположность vestir.",
+    "type": "quasi_regular",
+    "priority": "secundario",
+    "family": "vestir_despir",
+    "family_note": "Учи вместе с vestir",
+    "atenção": "dispo (eu, presente) — mudança no radical: e→i. Параллельно с vestir/visto.",
+    "tenses": {
+      "presente":             ["dispo", "despes", "despe", "despimos", "despis", "despem"],
+      "preterito_perfeito":   ["despi", "despiste", "despiu", "despimos", "despistes", "despiram"],
+      "preterito_imperfeito": ["despia", "despias", "despia", "despíamos", "despíeis", "despiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Despo o casaco quando chego a casa.", "ru": "Когда прихожу домой, снимаю пальто."},
+      {"tense": "preterito_perfeito",  "pt": "Despi-me e fui logo para a cama.", "ru": "Я разделась и сразу легла спать."},
+      {"tense": "preterito_imperfeito","pt": "Despia-se sempre antes do banho.", "ru": "Перед ванной она всегда раздевалась."}
+    ]
+  },
+  {
+    "order": 27,
+    "verb": "dormir",
+    "translation_ru": "спать",
+    "comment_ru": "Спать. Dormir a sesta = спать днём (сиеста).",
+    "type": "quasi_regular",
+    "priority": "super_basic",
+    "family": "dormir_ouvir",
+    "family_note": "Учи вместе с ouvir — похожие нарушения в eu presente",
+    "atenção": "durmo (eu, presente) — mudança no radical: o→u. Остальные формы регулярные.",
+    "tenses": {
+      "presente":             ["durmo", "dormes", "dorme", "dormimos", "dormis", "dormem"],
+      "preterito_perfeito":   ["dormi", "dormiste", "dormiu", "dormimos", "dormistes", "dormiram"],
+      "preterito_imperfeito": ["dormia", "dormias", "dormia", "dormíamos", "dormíeis", "dormiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Durmo mal quando estou stressada.", "ru": "Когда я в стрессе, я плохо сплю."},
+      {"tense": "preterito_perfeito",  "pt": "Dormi dez horas esta noite.", "ru": "Этой ночью я спала десять часов."},
+      {"tense": "preterito_imperfeito","pt": "Dormia sempre com a janela aberta.", "ru": "Я всегда спала с открытым окном."}
+    ]
+  },
+  {
+    "order": 28,
+    "verb": "ouvir",
+    "translation_ru": "слышать, слушать",
+    "comment_ru": "Слышать пассивно или слушать активно. Ouve-se bem = хорошо слышно.",
+    "type": "quasi_regular",
+    "priority": "prioritario",
+    "family": "dormir_ouvir",
+    "family_note": "Учи вместе с dormir",
+    "atenção": "ouço (eu, presente) — неожиданное -ç-! Остальные формы регулярные.",
+    "tenses": {
+      "presente":             ["ouço", "ouves", "ouve", "ouvimos", "ouvis", "ouvem"],
+      "preterito_perfeito":   ["ouvi", "ouviste", "ouviu", "ouvimos", "ouvistes", "ouviram"],
+      "preterito_imperfeito": ["ouvia", "ouvias", "ouvia", "ouvíamos", "ouvíeis", "ouviam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Ouço música portuguesa todos os dias.", "ru": "Каждый день я слушаю португальскую музыку."},
+      {"tense": "preterito_perfeito",  "pt": "Ouvi uma história muito bonita.", "ru": "Я услышала очень красивую историю."},
+      {"tense": "preterito_imperfeito","pt": "Ouvia rádio enquanto cozinhava.", "ru": "Я слушала радио пока готовила."}
+    ]
+  },
+  {
+    "order": 29,
+    "verb": "pedir",
+    "translation_ru": "просить, заказывать",
+    "comment_ru": "Просить о чём-то или заказывать (в кафе, ресторане). Pedir desculpa = извиняться.",
+    "type": "quasi_regular",
+    "priority": "prioritario",
+    "family": "pedir",
+    "atenção": "peço (eu, presente) — mudança no radical + ç. Não confundas com pôr.",
+    "tenses": {
+      "presente":             ["peço", "pedes", "pede", "pedimos", "pedis", "pedem"],
+      "preterito_perfeito":   ["pedi", "pediste", "pediu", "pedimos", "pedistes", "pediram"],
+      "preterito_imperfeito": ["pedia", "pedias", "pedia", "pedíamos", "pedíeis", "pediam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Peço sempre um café duplo.", "ru": "Я всегда заказываю двойной кофе."},
+      {"tense": "preterito_perfeito",  "pt": "Pedi ajuda ao meu professor.", "ru": "Я попросила помощи у своего учителя."},
+      {"tense": "preterito_imperfeito","pt": "Pedia sempre a mesma coisa no restaurante.", "ru": "В ресторане я всегда заказывала одно и то же."}
+    ]
+  },
+  {
+    "order": 30,
+    "verb": "conhecer",
+    "translation_ru": "знать (человека/место), познакомиться",
+    "comment_ru": "Знать человека или место лично. Não confundas com saber (знать факты).",
+    "type": "quasi_regular",
+    "priority": "prioritario",
+    "family": "conhecer_proteger",
+    "family_note": "Учи вместе с proteger — оба меняют орфографию в eu presente",
+    "atenção": "conheço (eu, presente) — ç перед o. Орфографическое правило.",
+    "tenses": {
+      "presente":             ["conheço", "conheces", "conhece", "conhecemos", "conheceis", "conhecem"],
+      "preterito_perfeito":   ["conheci", "conheceste", "conheceu", "conhecemos", "conhecestes", "conheceram"],
+      "preterito_imperfeito": ["conhecia", "conhecias", "conhecia", "conhecíamos", "conhecíeis", "conheciam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Conheço bem o centro de Guimarães.", "ru": "Я хорошо знаю центр Гимарайнша."},
+      {"tense": "preterito_perfeito",  "pt": "Conheci o meu parceiro em Moscovo.", "ru": "Я познакомилась со своим партнёром в Москве."},
+      {"tense": "preterito_imperfeito","pt": "Não conhecia ninguém quando cheguei a Portugal.", "ru": "Когда я приехала в Португалию, я никого не знала."}
+    ]
+  },
+  {
+    "order": 31,
+    "verb": "proteger",
+    "translation_ru": "защищать",
+    "comment_ru": "Защищать кого-то/что-то.",
+    "type": "quasi_regular",
+    "priority": "secundario",
+    "family": "conhecer_proteger",
+    "family_note": "Учи вместе с conhecer",
+    "atenção": "protejo (eu, presente) — j перед o вместо g. Орфографическое правило.",
+    "tenses": {
+      "presente":             ["protejo", "proteges", "protege", "protegemos", "protegeis", "protegem"],
+      "preterito_perfeito":   ["protegi", "protegeste", "protegeu", "protegemos", "protegestes", "protegeram"],
+      "preterito_imperfeito": ["protegia", "protegias", "protegia", "protegíamos", "protegíeis", "protegiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Protejo sempre a minha pele do sol.", "ru": "Я всегда защищаю кожу от солнца."},
+      {"tense": "preterito_perfeito",  "pt": "Protegeu os filhos de tudo.", "ru": "Она защищала детей от всего."},
+      {"tense": "preterito_imperfeito","pt": "O chapéu protegia-me do calor.", "ru": "Шляпа защищала меня от жары."}
+    ]
+  },
+  {
+    "order": 32,
+    "verb": "corrigir",
+    "translation_ru": "исправлять",
+    "comment_ru": "Исправлять ошибки, корректировать.",
+    "type": "quasi_regular",
+    "priority": "secundario",
+    "family": "corrigir",
+    "atenção": "corrijo (eu, presente) — j перед o вместо g. Аналогично proteger/protejo.",
+    "tenses": {
+      "presente":             ["corrijo", "corriges", "corrige", "corrigimos", "corrigis", "corrigem"],
+      "preterito_perfeito":   ["corrigi", "corrigiste", "corrigiu", "corrigimos", "corrigistes", "corrigiram"],
+      "preterito_imperfeito": ["corrigia", "corrigias", "corrigia", "corrigíamos", "corrigíeis", "corrigiam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "A professora corrije os erros com cuidado.", "ru": "Учительница аккуратно исправляет ошибки."},
+      {"tense": "preterito_perfeito",  "pt": "Corrigi o texto três vezes.", "ru": "Я исправила текст три раза."},
+      {"tense": "preterito_imperfeito","pt": "Corrigia os erros dos alunos todos os dias.", "ru": "Каждый день она исправляла ошибки учеников."}
+    ]
+  },
+  {
+    "order": 33,
+    "verb": "ficar",
+    "translation_ru": "оставаться, находиться, становиться",
+    "comment_ru": "Три значения! Ficar em casa (оставаться), ficar triste (стать грустной), onde fica? (где находится?).",
+    "type": "quasi_regular",
+    "priority": "super_basic",
+    "family": "ficar_chegar_comecar",
+    "family_note": "Учи вместе с chegar и começar — все меняют орфографию в perfeito",
+    "atenção": "fiquei (eu, perfeito) — c→qu перед -ei. Орфографическое правило.",
+    "tenses": {
+      "presente":             ["fico", "ficas", "fica", "ficamos", "ficais", "ficam"],
+      "preterito_perfeito":   ["fiquei", "ficaste", "ficou", "ficámos", "ficastes", "ficaram"],
+      "preterito_imperfeito": ["ficava", "ficavas", "ficava", "ficávamos", "ficáveis", "ficavam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Fico em casa quando está a chover.", "ru": "Когда идёт дождь, я остаюсь дома."},
+      {"tense": "preterito_perfeito",  "pt": "Fiquei muito feliz com a notícia.", "ru": "Я очень обрадовалась этой новости."},
+      {"tense": "preterito_imperfeito","pt": "Ficava sempre acordada até tarde.", "ru": "Я всегда не спала допоздна."}
+    ]
+  },
+  {
+    "order": 34,
+    "verb": "chegar",
+    "translation_ru": "приходить, приезжать, прибывать",
+    "comment_ru": "Прибывать куда-то. Chegar a tempo = прийти вовремя. Não chega = не хватает.",
+    "type": "quasi_regular",
+    "priority": "super_basic",
+    "family": "ficar_chegar_comecar",
+    "family_note": "Учи вместе с ficar и começar",
+    "atenção": "cheguei (eu, perfeito) — g→gu перед -ei. Аналог ficar/fiquei.",
+    "tenses": {
+      "presente":             ["chego", "chegas", "chega", "chegamos", "chegais", "chegam"],
+      "preterito_perfeito":   ["cheguei", "chegaste", "chegou", "chegámos", "chegastes", "chegaram"],
+      "preterito_imperfeito": ["chegava", "chegavas", "chegava", "chegávamos", "chegáveis", "chegavam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Chego ao trabalho às nove.", "ru": "На работу я прихожу в девять."},
+      {"tense": "preterito_perfeito",  "pt": "Cheguei tarde à reunião.", "ru": "Я опоздала на встречу."},
+      {"tense": "preterito_imperfeito","pt": "Chegava sempre antes de todos.", "ru": "Я всегда приходила раньше всех."}
+    ]
+  },
+  {
+    "order": 35,
+    "verb": "começar",
+    "translation_ru": "начинать",
+    "comment_ru": "Начинать что-то. Começar a + infinitivo = начать делать что-то.",
+    "type": "quasi_regular",
+    "priority": "super_basic",
+    "family": "ficar_chegar_comecar",
+    "family_note": "Учи вместе с ficar и chegar",
+    "atenção": "comecei (eu, perfeito) — ç→c перед -ei. Орфографическое правило.",
+    "tenses": {
+      "presente":             ["começo", "começas", "começa", "começamos", "começais", "começam"],
+      "preterito_perfeito":   ["comecei", "começaste", "começou", "começámos", "começastes", "começaram"],
+      "preterito_imperfeito": ["começava", "começavas", "começava", "começávamos", "começáveis", "começavam"]
+    },
+    "examples": [
+      {"tense": "presente",            "pt": "Começo a estudar português às oito.", "ru": "В восемь я начинаю учить португальский."},
+      {"tense": "preterito_perfeito",  "pt": "Comecei a aprender português há um ano.", "ru": "Я начала учить португальский год назад."},
+      {"tense": "preterito_imperfeito","pt": "Começava sempre o dia com café.", "ru": "Я всегда начинала день с кофе."}
+    ]
+  }
+]
