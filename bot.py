@@ -147,15 +147,16 @@ def format_verb_card(verb_data: dict) -> str:
         "preterito_perfeito": "🟠 Pretérito Perfeito",
         "preterito_imperfeito": "🟣 Pretérito Imperfeito"
     }
-    pronouns = ["eu", "tu", "ele/ela", "nós", "vós", "eles/elas"]
+    pronouns_display = ["eu", "tu", "ele/ela", "nós", "eles/elas"]
+    indices_display = [0, 1, 2, 3, 5]
 
     for tense_key, tense_label in tense_names.items():
         if tense_key in t:
             forms = t[tense_key]
             lines.append(f"*{tense_label}*")
-            for pronoun, form in zip(pronouns, forms):
-                if form != "-":
-                    lines.append(f"  {pronoun} → _{form}_")
+            for pronoun, idx in zip(pronouns_display, indices_display):
+                if idx < len(forms) and forms[idx] != "-":
+                    lines.append(f"  {pronoun} → _{forms[idx]}_")
             lines.append("")
 
     if verb_data.get("atenção"):
@@ -205,7 +206,7 @@ def generate_exercise(verbs: list[str], exercise_type: str, all_verb_data: list[
     else:
         instruction = (
             "Cria um exercício de conjugação em português europeu. "
-            "Para cada verbo, pede ao utilizador que escreva todas as formas (eu/tu/ele/nós/vós/eles) de um tempo verbal específico. "
+            "Para cada verbo, pede ao utilizador que escreva todas as formas (eu/tu/ele/nós/eles) de um tempo verbal específico. "
             "Varia os tempos verbais entre os diferentes verbos."
             + contrast_note
         )
@@ -399,7 +400,8 @@ async def scheduled_answers(context: ContextTypes.DEFAULT_TYPE):
 
     # Build answer sheet
     lines = ["📋 *Respostas de hoje:*\n"]
-    pronouns = ["eu", "tu", "ele/ela", "nós", "vós", "eles/elas"]
+    pronouns_display = ["eu", "tu", "ele/ela", "nós", "eles/elas"]
+    indices_display = [0, 1, 2, 3, 5]
     tense_names = {
         "presente": "Presente",
         "preterito_perfeito": "Pretérito Perfeito",
